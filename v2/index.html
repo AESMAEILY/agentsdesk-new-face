@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agents Desk — Football agent software for the transfer window</title>
+<meta name="description" content="Agents Desk is football agent software for the transfer window: AI player search across 45,000 players, a transfer fee and agent commission calculator, a private deal pipeline and live transfer news in one confidential workspace.">
+<meta name="theme-color" content="#0B0B0E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Agents Desk">
+<meta property="og:title" content="Agents Desk — your command centre for the transfer window">
+<meta property="og:description" content="AI player search, deal and commission calculator, unrepresented players and live transfer news, in one confidential workspace for football agents.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="site.css?v=4">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Agents Desk, back to top"><svg class="mark" width="30" height="30" viewBox="0 0 44 44" fill="none" aria-hidden="true"><circle class="ping" cx="22" cy="22" r="13.5" stroke="#F4691F" stroke-width="2"/><circle cx="22" cy="22" r="9" stroke="currentColor" stroke-width="3"/><circle class="beat" cx="22" cy="22" r="4.4" fill="#F4691F"/></svg><span>Agents Desk</span></a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="../dashboard.html#app-ai">AI Agent</a><a href="../dashboard.html#app-noagents">No Agents</a><a href="../dashboard.html#app-calc">Deal Calculator</a><a href="#desk" data-anchor>The Desk</a><a href="#security" data-anchor>Security</a>
+  </nav>
+  <div class="nav-end">
+    <a class="Btn nav-ct" href="#contact" data-anchor aria-label="Contact us"><span class="sign"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg></span><span class="text">Contact</span></a>
+    <a class="btn-dash" href="../dashboard.html#app-overview">Dashboard <span class="ar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+  </div>
+</header>
+<div class="sheet" id="sheet" hidden>
+  <a href="../dashboard.html#app-ai">AI Agent</a><a href="../dashboard.html#app-noagents">No Agents</a><a href="../dashboard.html#app-calc">Deal Calculator</a><a href="#desk" data-anchor>The Desk</a><a href="#security" data-anchor>Security</a><a href="#contact" data-anchor>Contact</a>
+  <a class="sheet-cta" href="../dashboard.html#app-overview">Open the dashboard demo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero hero-v3 dark" id="top" aria-labelledby="h1">
+  <div class="hero-bg" aria-hidden="true">
+    <canvas class="nf"></canvas>
+    <div class="hero-shade"></div>
+  </div>
+  <div class="wrap hero-g">
+    <div class="hero-tx">
+      <p class="chip"><i></i>Top-5 league window opens in <b class="days">89</b> days</p>
+      <h1 class="display" id="h1">Your command centre for the <span class="o">transfer window.</span></h1>
+      <p class="lead">Your player portfolio and the entire transfer market, moving in real time. Search 45,000 players in plain language, settle the fee and your commission before the call, and hear news on your clients first.</p>
+      <div class="ctas">
+        <a class="btn-primary" href="../dashboard.html#app-overview">Explore the live demo <span class="ar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="btn-ghost" href="https://agentsdesk.football/auth/register" target="_blank" rel="noopener">Request access</a>
+      </div>
+      <p class="fine">Demo runs on sample data. No account needed.</p>
+    </div>
+    <div class="pc-stage" role="region" aria-label="Featured players, sample data"></div>
+  </div>
+  <div class="tape" aria-hidden="true"><div class="tape-track"></div></div>
+  <div class="wrap proof">
+    <div class="board" role="list">
+      <div class="cell" role="listitem"><span class="lab">Players tracked</span><div class="odo" data-odo="45000" aria-label="45,000">45,000</div></div>
+      <div class="cell" role="listitem"><span class="lab"><i class="live"></i>Active agents</span><div class="odo" data-odo="146" aria-label="146">146</div></div>
+      <div class="cell" role="listitem"><span class="lab">Leagues covered</span><div class="odo" data-odo="10" aria-label="10">10</div></div>
+      <div class="cell" role="listitem"><span class="lab">Tax regimes modelled</span><div class="odo" data-odo="13" aria-label="13">13</div></div>
+    </div>
+    <div class="leagues"><span>Tracking players across Europe's top leagues</span><div class="row-logos"><span class="lg"><i class="flag"><svg viewBox="0 0 30 20" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect x="13" width="4" height="20" fill="#CE1124"/><rect y="8" width="30" height="4" fill="#CE1124"/></svg></i>Premier League</span><span class="lg"><i class="flag"><svg viewBox="0 0 30 20" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg></i>La Liga</span><span class="lg"><i class="flag"><svg viewBox="0 0 30 20" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="10" height="20" fill="#009246"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#CE2B37"/></svg></i>Serie A</span><span class="lg"><i class="flag"><svg viewBox="0 0 30 20" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="30" height="7" fill="#000"/><rect y="6.6" width="30" height="7" fill="#DD0000"/><rect y="13.3" width="30" height="6.7" fill="#FFCE00"/></svg></i>Bundesliga</span><span class="lg"><i class="flag"><svg viewBox="0 0 30 20" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg></i>Ligue 1</span></div></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="feat dark" aria-labelledby="f-ai">
+  <div class="feat-pin">
+    <div class="feat-in">
+      <span class="eyebrow">AI Agent</span>
+      <h2 class="display feat-h" id="f-ai"><span class="fl"><span>Ask the desk</span></span><span class="fl"><span>like a colleague.</span></span></h2>
+      <p class="feat-p">Describe the player the way a sporting director would: position, foot, age, league, budget. The AI Agent turns it into a shortlist of real profiles from the players we track.</p>
+      <ul class="feat-pts"><li>Plain-language search</li><li>Value, contract and agent status on every result</li><li>Conversation history saved</li></ul>
+      <a class="feat-go" href="../dashboard.html#app-ai">Try the AI Agent <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="feat-m"><div class="device"><div class="dbar"><span class="dots"><i></i><i></i><i></i></span><span class="durl">agentsdesk.football/dashboard</span><span class="dtag">Demo · sample data</span></div><video data-rec="ai" poster="../ai_poster.jpg" muted playsinline preload="none" aria-label="AI Agent page in use" width="1920" height="1200"><source src="../ai.mp4" type="video/mp4"><source src="../ai.webm" type="video/webm"></video></div></div>
+  </div>
+</section>
+<section class="feat light" aria-labelledby="f-noagents">
+  <div class="feat-pin">
+    <div class="feat-in">
+      <span class="eyebrow">No Agents</span>
+      <h2 class="display feat-h" id="f-noagents"><span class="fl"><span>Find the players</span></span><span class="fl"><span>nobody represents.</span></span></h2>
+      <p class="feat-p">A live list of unrepresented players and players looked after by relatives. Filter by value from under €500k to €25M+ and add them to your targets in one tap.</p>
+      <ul class="feat-pts"><li>Value bands for every budget</li><li>Position, league and agent status filters</li><li>One-tap targets</li></ul>
+      <a class="feat-go" href="../dashboard.html#app-noagents">Open No Agents <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="feat-m"><div class="device"><div class="dbar"><span class="dots"><i></i><i></i><i></i></span><span class="durl">agentsdesk.football/dashboard</span><span class="dtag">Demo · sample data</span></div><video data-rec="noagents" poster="../noagents_poster.jpg" muted playsinline preload="none" aria-label="No Agents page in use" width="1920" height="1200"><source src="../noagents.mp4" type="video/mp4"><source src="../noagents.webm" type="video/webm"></video></div></div>
+  </div>
+</section>
+
+<!-- THE DESK -->
+<section class="desk light" id="desk" aria-labelledby="deskH">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="eyebrow">The desk</span><h2 class="display" id="deskH">The rest of the desk, at work.</h2><p>Recorded from the dashboard demo. Pick a tool to watch it, then open it and try it yourself.</p></div>
+    <div class="tut">
+      <div class="tut-tabs" role="tablist" aria-label="Desk tools"><button class="tt on" role="tab" aria-selected="true" aria-controls="tf-calc" data-i="0" data-url="deal-calculator"><span class="tn">01</span><span class="tb"><b>Settle the number before the call.</b><small>Deal Calculator</small><span class="tx">Pick the player and both clubs from lists, set fee, add-ons and sell-on, and split the commission. Your cut updates as you type.</span></span><span class="tpg"><i></i></span></button><button class="tt" role="tab" aria-selected="false" aria-controls="tf-agency" data-i="1" data-url="agency"><span class="tn">02</span><span class="tb"><b>Your whole squad on one screen.</b><small>Agency</small><span class="tx">Injuries, rumours, contracts running out and last-match ratings for every player you manage.</span></span><span class="tpg"><i></i></span></button><button class="tt" role="tab" aria-selected="false" aria-controls="tf-teams" data-i="2" data-url="teams"><span class="tn">03</span><span class="tb"><b>Read the season.</b><small>Teams</small><span class="tx">Switch league, pick a club, and compare squad value, age and form with the league.</span></span><span class="tpg"><i></i></span></button></div>
+      <div class="tut-stage"><div class="dbar"><span class="dots"><i></i><i></i><i></i></span><span class="durl" id="tutUrl">agentsdesk.football/dashboard/deal-calculator</span><span class="dtag">Demo · sample data</span></div><div class="tut-frames"><figure class="tf on" id="tf-calc" data-i="0"><video data-rec="calc" poster="../calc_poster.jpg" muted playsinline preload="none" aria-label="Deal Calculator page in use" width="1920" height="1200"><source src="../calc.mp4" type="video/mp4"><source src="../calc.webm" type="video/webm"></video><a class="tf-go" href="../dashboard.html#app-calc">Open Deal Calculator <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></figure><figure class="tf" id="tf-agency" data-i="1"><video data-rec="agency" poster="../agency_poster.jpg" muted playsinline preload="none" aria-label="Agency page in use" width="1920" height="1200"><source src="../agency.mp4" type="video/mp4"><source src="../agency.webm" type="video/webm"></video><a class="tf-go" href="../dashboard.html#app-agency">Open Agency <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></figure><figure class="tf" id="tf-teams" data-i="2"><video data-rec="teams" poster="../teams_poster.jpg" muted playsinline preload="none" aria-label="Teams page in use" width="1920" height="1200"><source src="../teams.mp4" type="video/mp4"><source src="../teams.webm" type="video/webm"></video><a class="tf-go" href="../dashboard.html#app-teams">Open Teams <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></figure></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIDENTIALITY (wording from agentsdesk.football) -->
+<section class="conf dark" id="security" aria-labelledby="secH">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Confidentiality</span><h2 class="display" id="secH">Nothing on this desk leaves it.</h2><p>Your pipeline is the most commercially sensitive thing you own. One leak costs a deal, a client, or a reputation you spent a decade building. So this is the part we built first.</p></div>
+    <div class="conf-g"><article class="cf"><span class="cf-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 4v16" opacity=".4"/></svg></span><h3 class="mono">Isolation</h3><p>Your agency's data sits in <strong>its own tenant</strong>. Nothing pools, nothing is queried across agencies, and no other desk can reach yours.</p></article><article class="cf"><span class="cf-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg></span><h3 class="mono">Access</h3><p>Only the people you invite. <strong>We don't read your desk</strong> — support can't open it without your explicit, written go-ahead, per incident.</p></article><article class="cf"><span class="cf-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M4 4l16 16"/></svg></span><h3 class="mono">Reuse</h3><p>Your deals <strong>never train a model</strong>, feed a ranking, or surface to another client. Not sold, not shared, not aggregated, not "anonymised" and passed on.</p></article><article class="cf"><span class="cf-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"/></svg></span><h3 class="mono">Independence</h3><p>We <strong>represent no players and broker no deals</strong>. No agency, no stake in any transfer that moves through this platform, nothing to gain from what's on your desk.</p></article><article class="cf"><span class="cf-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><h3 class="mono">Protection</h3><p>Encrypted in transit and at rest, on infrastructure we monitor continuously, with access logged and reviewed.</p></article><article class="cf"><span class="cf-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></span><h3 class="mono">Exit</h3><p>Export everything and close your account whenever you want. <strong>Deletion means deletion</strong> — not archived, not retained "for analytics".</p></article></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq dark" id="faq" aria-labelledby="faqH">
+  <div class="wrap faq-g">
+    <div class="faq-side"><span class="eyebrow">FAQ</span><h2 class="display" id="faqH">Questions agents ask us.</h2><p>About your data, who can join, and how the tools work. Anything else, write to us.</p><a class="btn-ghost" href="#contact" data-anchor>Contact the team</a></div>
+    <div id="faqList">
+      <div class="qa open"><button aria-expanded="true">What is Agents Desk?<span class="pm"></span></button><div class="ans"><div><p>Agents Desk is software for football agents and agencies. It combines AI player search, a transfer fee and commission calculator, a private deal pipeline and a live transfer news feed in one workspace built for the transfer window.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Who can see my deals?<span class="pm"></span></button><div class="ans"><div><p>Only you and the people you invite into your organisation. No other agent, agency or club can see your pipeline, your valuations or your client list. Access ends at the edge of your desk.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Do you use my data for anything else?<span class="pm"></span></button><div class="ans"><div><p>No. Your data exists to run the service you're using and nothing else. It isn't sold, shared with partners, mined for market reports, or used to improve anything outside your own account.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">How does the AI player search work?<span class="pm"></span></button><div class="ans"><div><p>You describe the player in plain language, for example position, profile, preferred foot, league and budget. The desk turns that brief into a shortlist of matching profiles from the players we track across the European leagues.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">How do I calculate my commission on a transfer?<span class="pm"></span></button><div class="ans"><div><p>Open the deal calculator, enter the transfer fee, add-ons and the player's contract, then set your commission as a percentage of wages or of the fee and who pays it. It shows the total, each party's share and the instalments.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Are you connected to an agency?<span class="pm"></span></button><div class="ans"><div><p>No, and we intend to keep it that way. Agents Desk is a software company. We don't represent players, take mandates, or hold a position in any deal — which means we're never on the other side of your table.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">What happens to my data if I leave?<span class="pm"></span></button><div class="ans"><div><p>You export it in full, then we delete it. No retention window dressed up as a backup policy, no anonymised copy kept behind the scenes.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Why is access restricted?<span class="pm"></span></button><div class="ans"><div><p>Because a room full of working agents is worth more than a room full of anyone. We check that applicants are active in the market, which is also what lets us keep the confidentiality guarantees above meaningful.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-sec light" id="contact" aria-labelledby="ctH">
+  <div class="wrap ct-g">
+    <div class="ct-l rv">
+      <span class="eyebrow">Contact</span>
+      <h2 class="display" id="ctH">Talk to the desk.</h2>
+      <p>The window opens in <b class="days">89</b> days. Questions about access, the tools or your data? Write to us and a person from the team answers.</p>
+      <ul class="example-2 " aria-label="Agents Desk channels"><li class="icon-content" data-soc="instagram"><a href="https://www.instagram.com/agentsdesk.football/" aria-label="Instagram" data-social="instagram" target="_blank" rel="noopener"><div class="filled" style="background:linear-gradient(45deg,#405de6,#5b51db,#b33ab4,#c135b4,#e1306c,#fd1f1f)"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a><div class="tooltip" style="background:linear-gradient(45deg,#405de6,#5b51db,#b33ab4,#c135b4,#e1306c,#fd1f1f)">Instagram</div></li><li class="icon-content" data-soc="linkedin" hidden><a href="#contact" aria-label="LinkedIn" data-social="linkedin"><div class="filled" style="background:#0274b3"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z" fill="currentColor" stroke="none"/></svg></a><div class="tooltip" style="background:#0274b3">LinkedIn</div></li><li class="icon-content" data-soc="youtube" hidden><a href="#contact" aria-label="YouTube" data-social="youtube"><div class="filled" style="background:#ff0000"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.4-1.2.4-3.8.4-3.8s0-2.6-.4-3.8zM10 15.1V8.9l5.2 3.1z" fill="currentColor" stroke="none"/></svg></a><div class="tooltip" style="background:#ff0000">YouTube</div></li><li class="icon-content" data-soc="mail"><a href="mailto:info@agentsdesk.football" aria-label="Email" data-social="mail"><div class="filled" style="background:#F4691F"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg></a><div class="tooltip" style="background:#F4691F">Email</div></li><li class="icon-content" data-soc="phone"><a href="tel:+4917656866255" aria-label="Phone" data-social="phone"><div class="filled" style="background:#16A34A"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a><div class="tooltip" style="background:#16A34A">Phone</div></li></ul>
+      <a class="btn-primary dark-on-light" href="https://agentsdesk.football/auth/register" target="_blank" rel="noopener">Request access <span class="ar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+    <div class="ct-cards">
+      <a class="ct-c" href="mailto:info@agentsdesk.football"><span class="ct-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg></span><span><small>Email</small><b>info@agentsdesk.football</b></span></a>
+      <a class="ct-c" href="tel:+4917656866255"><span class="ct-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><span><small>Phone</small><b>+49 176 56866255</b></span></a>
+      <a class="ct-c" href="https://www.google.com/maps/search/?api=1&amp;query=Neue+Sch%C3%B6nhauser+Stra%C3%9Fe+19+10178+Berlin" target="_blank" rel="noopener"><span class="ct-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span><small>Address</small><b>Phil Wieners GbR · Neue Schönhauser Straße 19, 10178 Berlin</b></span></a>
+      <form class="ct-f" id="ctF"><div class="ct-row"><label><span>Name</span><input name="n" required autocomplete="name"></label><label><span>Email</span><input name="e" type="email" required autocomplete="email"></label></div><label><span>Message</span><textarea name="m" rows="3" required placeholder="How can we help?"></textarea></label><button class="ct-send" type="submit">Send message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><p class="ct-n">Opens your email app with the message ready to send to info@agentsdesk.football.</p></form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-g">
+    <a class="brand" href="#top" aria-label="Agents Desk"><svg class="mark" width="30" height="30" viewBox="0 0 44 44" fill="none" aria-hidden="true"><circle class="ping" cx="22" cy="22" r="13.5" stroke="#F4691F" stroke-width="2"/><circle cx="22" cy="22" r="9" stroke="currentColor" stroke-width="3"/><circle class="beat" cx="22" cy="22" r="4.4" fill="#F4691F"/></svg><span>Agents Desk</span></a>
+    <nav aria-label="Footer"><a href="../dashboard.html#app-ai">AI Agent</a><a href="../dashboard.html#app-calc">Deal Calculator</a><a href="#security" data-anchor>Security</a><a href="https://agentsdesk.football/term-of-service">Terms of service</a><a href="https://agentsdesk.football/privacy-policy">Privacy</a><a href="https://agentsdesk.football/legal-notice">Legal notice</a><a href="#contact" data-anchor>Contact</a></nav>
+    <p>Agents Desk is an independent software company. We represent no players and take no position in any transfer. This is a design prototype: the dashboard demo uses fictional sample data.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"SoftwareApplication","name":"Agents Desk","url":"https://agentsdesk.football/","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"Football agent software for the transfer window: AI player search, transfer fee and agent commission calculator, deal pipeline and live transfer news."},
+{"@type":"Organization","name":"Agents Desk","url":"https://agentsdesk.football/","email":"info@agentsdesk.football","telephone":"+49 176 56866255","sameAs":["https://www.instagram.com/agentsdesk.football/"],"address":{"@type":"PostalAddress","streetAddress":"Neue Schönhauser Straße 19","postalCode":"10178","addressLocality":"Berlin","addressCountry":"DE"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"info@agentsdesk.football","telephone":"+49 176 56866255"}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is Agents Desk?","acceptedAnswer":{"@type":"Answer","text":"Agents Desk is software for football agents and agencies. It combines AI player search, a transfer fee and commission calculator, a private deal pipeline and a live transfer news feed in one workspace built for the transfer window."}},
+{"@type":"Question","name":"Who can see my deals?","acceptedAnswer":{"@type":"Answer","text":"Only you and the people you invite into your organisation. No other agent, agency or club can see your pipeline, your valuations or your client list."}},
+{"@type":"Question","name":"How do I calculate my commission on a transfer?","acceptedAnswer":{"@type":"Answer","text":"Open the deal calculator, enter the transfer fee, add-ons and the player's contract, then set your commission as a percentage of wages or of the fee and who pays it."}},
+{"@type":"Question","name":"Are you connected to an agency?","acceptedAnswer":{"@type":"Answer","text":"No. Agents Desk is a software company. We don't represent players, take mandates or hold a position in any deal."}}
+]}]}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="numbers.js?v=4" defer></script>
+<script src="../site.js?v=3" defer></script>
+</body>
+</html>
