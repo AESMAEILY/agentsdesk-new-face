@@ -98,7 +98,7 @@ h1,h2,h3,p{margin:0}
 .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .fine{margin-top:14px;font-size:13px;color:var(--chalk-faint)}
 /* hero globe */
-.globe-col{position:relative;justify-self:end;width:100%;max-width:640px;margin-right:clamp(-60px,-3vw,0px)}
+.globe-col{transition:padding-bottom .5s var(--ease);position:relative;justify-self:end;width:100%;max-width:640px;margin-right:clamp(-60px,-3vw,0px)}
 .globe-wrap{position:relative;aspect-ratio:1;width:100%;touch-action:pan-y;user-select:none;-webkit-user-select:none;opacity:0;transform:scale(.94);transition:opacity 1.2s var(--ease),transform 1.4s var(--ease)}
 .globe-wrap.ready{opacity:1;transform:none}
 .globe-wrap::before{content:"";position:absolute;inset:9%;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(244,105,31,.14),transparent 68%);filter:blur(30px);pointer-events:none}

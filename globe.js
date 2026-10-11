@@ -50,9 +50,9 @@ function init(wrap){
   const canvas = wrap.querySelector('canvas');
   const layer = wrap.querySelector('.gl-layer');
   const card = wrap.querySelector('.gl-card');
-  const nav = wrap.parentElement.querySelector('.gl-nav');
+  const nav = wrap.parentElement.querySelector('.gl-nav') || document.createElement('div'); // player buttons are optional
   const svg = wrap.querySelector('.gl-lead');
-  const foot = wrap.parentElement.querySelector('.gl-foot');
+  const foot = wrap.parentElement; // reserves room below the globe for the card on phones
   const line = svg.querySelector('line'), dot = svg.querySelector('circle');
   const R = 0.8, ELEV = 0.03, rad = d => d * Math.PI / 180;
   const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -202,7 +202,7 @@ function init(wrap){
       let x, y, lx, ly;
       if (small()) {
         x = (W - cw) / 2; y = Math.max(fp.y + 40, H * 0.52); lx = Math.max(x + 24, Math.min(x + cw - 24, fp.x)); ly = y;
-        foot.style.marginTop = Math.max(0, y + ch - H + 16) + 'px';
+        foot.style.paddingBottom = Math.max(0, y + ch - H + 16) + 'px';
       }
       else {
         x = Math.max(-W * 0.12, fp.x - 60 - cw); y = Math.max(8, Math.min(H - ch - 8, fp.y - ch * 0.42));
@@ -213,7 +213,7 @@ function init(wrap){
       dot.setAttribute('cx', lx); dot.setAttribute('cy', ly);
       svg.classList.add('on');
     } else svg.classList.remove('on');
-    if (!small()) foot.style.marginTop = '';
+    if (!small()) foot.style.paddingBottom = '';
   }
 
   /* ---------- loop (runs only while the hero is on screen) ---------- */
