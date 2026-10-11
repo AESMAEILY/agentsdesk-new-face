@@ -49,7 +49,16 @@
       </div>
       <p class="fine">Demo runs on sample data. No account needed.</p>
     </div>
-    <div class="orb-wrap" aria-hidden="true"><canvas id="orb"></canvas><div class="orb-fallback"></div></div>
+    <div class="globe-col">
+      <div class="globe-wrap" id="globe">
+        <canvas aria-label="Globe showing where featured players play now. Drag to spin." role="img"></canvas>
+        <div class="orb-fallback" aria-hidden="true"></div>
+        <svg class="gl-lead" aria-hidden="true"><line x1="0" y1="0" x2="0" y2="0"/><circle r="3"/></svg>
+        <div class="gl-layer" aria-hidden="true"></div>
+        <div class="gl-card" aria-live="polite"></div>
+      </div>
+      <div class="gl-foot"><div class="gl-nav" role="group" aria-label="Featured players"></div><span class="gl-tag">Demo · sample players</span></div>
+    </div>
   </div>
   <div class="wrap proof">
     <div class="board" role="list">
@@ -166,7 +175,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-<script src="orb.js" defer></script>
+<script type="module" src="globe.js"></script>
 <script src="site.js" defer></script>
 </body>
 </html>

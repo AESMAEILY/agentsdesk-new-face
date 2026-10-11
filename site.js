@@ -10,8 +10,8 @@ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const LEAGUE_LOGOS={};
 $$('.lg').forEach(el=>{const u=LEAGUE_LOGOS[el.textContent.trim()];const f=$('.flag',el);if(u&&f){const i=new Image();i.className='lg-logo';i.alt='';i.src=u;f.replaceWith(i);}});
 
-/* Hero orb (renders only while visible) */
-const orb=$('#orb');if(orb&&window.mountOrb)window.mountOrb(orb,{maxDpr:1.5,maxPx:840});
+
+
 
 /* Smooth scroll */
 let lenis=null;
@@ -60,7 +60,7 @@ const feats=$$('.feat');
 const fio=new IntersectionObserver(es=>es.forEach(e=>{const v=$('video',e.target);if(!v)return;if(e.isIntersecting){v.loop=true;if(!reduce){if(v.preload!=='auto'){v.preload='auto';v.load();}v.play().catch(()=>{});}}else v.pause();}),{threshold:.1});
 feats.forEach(f=>fio.observe(f));
 if(window.gsap&&window.ScrollTrigger&&!reduce&&matchMedia('(min-width:901px)').matches){
-  feats.forEach(f=>{const tl=gsap.timeline({scrollTrigger:{trigger:f,start:'top 80%',end:'top 0%',scrub:1}});
+  feats.forEach(f=>{const tl=gsap.timeline({scrollTrigger:{trigger:f,start:'top 85%',end:'top 20%',scrub:1}});
     tl.from($$('.fl > span',f),{yPercent:110,opacity:0,stagger:.15,duration:1,ease:'power3.out'},0)
       .from([$('.eyebrow',f),$('.feat-p',f),$('.feat-pts',f),$('.feat-go',f)],{opacity:0,y:24,stagger:.1,duration:.7},.3)
       .fromTo($('.device',f),{scale:.82,y:80,opacity:.3},{scale:1,y:0,opacity:1,duration:1.6,ease:'power2.out'},.1);});
