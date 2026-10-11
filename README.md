@@ -9,7 +9,7 @@ A redesign prototype for **[agentsdesk.football](https://agentsdesk.football)**,
 ## What's inside
 
 ### Landing page
-- **Hero globe**: a dotted WebGL globe that turns and stops at each featured player's current city (Madrid, Manchester, Naples, Riyadh). A card pops up with the player's photo, country flag, position and latest transfer (old club → new club, year, fee). Lines connect each player's home country and the Agents Desk office in Munich to their club. Visitors can drag to spin it, or pick a player from the buttons below. The four players are demo data.
+- **Hero globe**: a dotted WebGL globe that turns and stops at each featured player's current city (Madrid, Manchester, Naples, Riyadh). A card pops up with the player's photo, country flag, position and latest transfer (old club → new club, year, fee). Lines connect each player's home country and the Agents Desk office in Munich to their club. Visitors can drag to spin it. The four players are demo data.
 - **Proof strip** with rolling-number counters (players tracked, active agents, leagues, tax regimes).
 - **AI Agent** and **No Agents** feature sections with HD screen recordings.
 - **The Desk**: a short tutorial for Deal Calculator, Agency and Teams.
