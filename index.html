@@ -14,7 +14,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="site.css?v=3">
+<link rel="stylesheet" href="site.css?v=5">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -37,7 +37,11 @@
 
 <main id="main">
 <!-- HERO -->
-<section class="hero dark" id="top" aria-labelledby="h1">
+<section class="hero hero-v3 dark" id="top" aria-labelledby="h1">
+  <div class="hero-bg" aria-hidden="true">
+    <canvas class="nf"></canvas>
+    <div class="hero-shade"></div>
+  </div>
   <div class="wrap hero-g">
     <div class="hero-tx">
       <p class="chip"><i></i>Top-5 league window opens in <b class="days">89</b> days</p>
@@ -49,16 +53,9 @@
       </div>
       <p class="fine">Demo runs on sample data. No account needed.</p>
     </div>
-    <div class="globe-col">
-      <div class="globe-wrap" id="globe">
-        <canvas aria-label="Globe showing where featured players play now. Drag to spin." role="img"></canvas>
-        <div class="orb-fallback" aria-hidden="true"></div>
-        <svg class="gl-lead" aria-hidden="true"><line x1="0" y1="0" x2="0" y2="0"/><circle r="3"/></svg>
-        <div class="gl-layer" aria-hidden="true"></div>
-        <div class="gl-card" aria-live="polite"></div>
-      </div>
-    </div>
+    <div class="pc-stage" role="region" aria-label="Featured players, sample data"></div>
   </div>
+  <div class="tape" aria-hidden="true"><div class="tape-track"></div></div>
   <div class="wrap proof">
     <div class="board" role="list">
       <div class="cell" role="listitem"><span class="lab">Players tracked</span><div class="odo" data-odo="45000" aria-label="45,000">45,000</div></div>
@@ -174,7 +171,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-<script type="module" src="globe.js?v=3"></script>
+<script src="numbers.js?v=5" defer></script>
 <script src="site.js?v=3" defer></script>
 </body>
 </html>

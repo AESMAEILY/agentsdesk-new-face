@@ -9,7 +9,8 @@ A redesign prototype for **[agentsdesk.football](https://agentsdesk.football)**,
 ## What's inside
 
 ### Landing page
-- **Hero globe**: a dotted WebGL globe that turns and stops at each featured player's current city (Madrid, Manchester, Naples, Riyadh). A card pops up with the player's photo, country flag, position and latest transfer (old club → new club, year, fee). Lines connect each player's home country and the Agents Desk office in Munich to their club. Visitors can drag to spin it. The four players are demo data.
+- **Hero, exchange board**: the whole top banner is a live stock-exchange style board drawn in the browser (sharp on any screen). Columns of live deals, market values, release clauses, loans and free agents scroll and tick green or red, over a candlestick chart with a trend line. Player cards (photo, city, flag, position, old club → new club, year, fee) fade in and drift through it, and a ticker tape runs along the bottom. All figures are sample data.
+- **Earlier hero, the globe** is kept at [/v1/](https://aesmaeily.github.io/agentsdesk-new-face/v1/): a dotted WebGL globe that tours each featured player's current city with a pop-up transfer card.
 - **Proof strip** with rolling-number counters (players tracked, active agents, leagues, tax regimes).
 - **AI Agent** and **No Agents** feature sections with HD screen recordings.
 - **The Desk**: a short tutorial for Deal Calculator, Agency and Teams.
@@ -36,11 +37,12 @@ dashboard.html        Interactive dashboard demo (sample data)
 site.css              Landing page styles
 dashboard.css         Dashboard styles
 site.js               Landing page behaviour (menu, counters, videos, FAQ, contact)
-globe.js              Hero globe: player tour, pop-up cards, drag to spin (player data at the top of the file)
-cobe.js               cobe 2.0.1 globe library (MIT)
+numbers.js            Hero exchange board, floating player cards and ticker tape (player data at the top of the file)
+v1/                   The earlier globe version of the landing page
+globe.js / cobe.js    Globe used by v1 (cobe 2.0.1, MIT)
 orb.js                WebGL orb used on the dashboard's AI Agent page
 dashboard.js          Dashboard views and the sample data generator
-*_head.webp           Player photos for the globe cards
+*_head.webp           Player photos for the hero cards
 rma/psg/mci/bvb/nap/ars/hil.webp   Club crests for the transfer row
 *.mp4 / *.webm        HD screen recordings of the dashboard
 *_poster.jpg          First frame of each recording
@@ -49,14 +51,14 @@ README.md / LICENSE
 ```
 
 ## Run it locally
-The globe loads as a JavaScript module, so serve the folder instead of opening the file directly:
+Serve the folder instead of opening the file directly:
 ```
 python3 -m http.server 8000
 # then open http://localhost:8000/
 ```
 
 ## Tech
-Plain HTML/CSS/JavaScript, no build step · cobe (WebGL globe) · GSAP + ScrollTrigger · Lenis smooth scroll · WebGL shader · browser localStorage for saved items (each visitor's own browser only).
+Plain HTML/CSS/JavaScript, no build step · Canvas exchange board · cobe (WebGL globe, v1) · GSAP + ScrollTrigger · Lenis smooth scroll · WebGL shader · browser localStorage for saved items (each visitor's own browser only).
 
 ## Credits & rights
 Design and code by **Alireza Esmaeily** for Agents Desk.
