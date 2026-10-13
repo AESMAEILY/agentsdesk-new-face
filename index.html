@@ -13,8 +13,8 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="site.css?v=5">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400..600&display=swap">
+<link rel="stylesheet" href="site.css?v=20261013">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -22,17 +22,17 @@
 <header class="nav" id="nav">
   <a class="brand" href="#top" aria-label="Agents Desk, back to top"><svg class="mark" width="30" height="30" viewBox="0 0 44 44" fill="none" aria-hidden="true"><circle class="ping" cx="22" cy="22" r="13.5" stroke="#F4691F" stroke-width="2"/><circle cx="22" cy="22" r="9" stroke="currentColor" stroke-width="3"/><circle class="beat" cx="22" cy="22" r="4.4" fill="#F4691F"/></svg><span>Agents Desk</span></a>
   <nav class="nav-links" aria-label="Main">
-    <a href="dashboard.html#app-ai">AI Agent</a><a href="dashboard.html#app-noagents">No Agents</a><a href="dashboard.html#app-calc">Deal Calculator</a><a href="#desk" data-anchor>The Desk</a><a href="#security" data-anchor>Security</a>
+    <a href="auth.html#app-ai">AI Agent</a><a href="auth.html#app-noagents">No Agents</a><a href="auth.html#app-calc">Deal Calculator</a><a href="#desk" data-anchor>The Desk</a><a href="#security" data-anchor>Security</a><a href="pricing.html">Pricing</a>
   </nav>
   <div class="nav-end">
     <a class="Btn nav-ct" href="#contact" data-anchor aria-label="Contact us"><span class="sign"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg></span><span class="text">Contact</span></a>
-    <a class="btn-dash" href="dashboard.html#app-overview">Dashboard <span class="ar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="btn-dash" href="auth.html#app-overview">Dashboard <span class="ar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
   </div>
 </header>
 <div class="sheet" id="sheet" hidden>
-  <a href="dashboard.html#app-ai">AI Agent</a><a href="dashboard.html#app-noagents">No Agents</a><a href="dashboard.html#app-calc">Deal Calculator</a><a href="#desk" data-anchor>The Desk</a><a href="#security" data-anchor>Security</a><a href="#contact" data-anchor>Contact</a>
-  <a class="sheet-cta" href="dashboard.html#app-overview">Open the dashboard demo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a href="auth.html#app-ai">AI Agent</a><a href="auth.html#app-noagents">No Agents</a><a href="auth.html#app-calc">Deal Calculator</a><a href="#desk" data-anchor>The Desk</a><a href="#security" data-anchor>Security</a><a href="pricing.html">Pricing</a><a href="#contact" data-anchor>Contact</a>
+  <a class="sheet-cta" href="auth.html#app-overview">Open the dashboard demo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </div>
 
 <main id="main">
@@ -48,7 +48,7 @@
       <h1 class="display" id="h1">Your command centre for the <span class="o">transfer window.</span></h1>
       <p class="lead">Your player portfolio and the entire transfer market, moving in real time. Search 45,000 players in plain language, settle the fee and your commission before the call, and hear news on your clients first.</p>
       <div class="ctas">
-        <a class="btn-primary" href="dashboard.html#app-overview">Explore the live demo <span class="ar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="btn-primary" href="auth.html#app-overview">Explore the live demo <span class="ar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
         <a class="btn-ghost" href="https://agentsdesk.football/auth/register" target="_blank" rel="noopener">Request access</a>
       </div>
       <p class="fine">Demo runs on sample data. No account needed.</p>
@@ -75,7 +75,7 @@
       <h2 class="display feat-h" id="f-ai"><span class="fl"><span>Ask the desk</span></span><span class="fl"><span>like a colleague.</span></span></h2>
       <p class="feat-p">Describe the player the way a sporting director would: position, foot, age, league, budget. The AI Agent turns it into a shortlist of real profiles from the players we track.</p>
       <ul class="feat-pts"><li>Plain-language search</li><li>Value, contract and agent status on every result</li><li>Conversation history saved</li></ul>
-      <a class="feat-go" href="dashboard.html#app-ai">Try the AI Agent <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="feat-go" href="auth.html#app-ai">Try the AI Agent <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
     <div class="feat-m"><div class="device"><div class="dbar"><span class="dots"><i></i><i></i><i></i></span><span class="durl">agentsdesk.football/dashboard</span><span class="dtag">Demo · sample data</span></div><video data-rec="ai" poster="ai_poster.jpg" muted playsinline preload="none" aria-label="AI Agent page in use" width="1920" height="1200"><source src="ai.mp4" type="video/mp4"><source src="ai.webm" type="video/webm"></video></div></div>
   </div>
@@ -87,7 +87,7 @@
       <h2 class="display feat-h" id="f-noagents"><span class="fl"><span>Find the players</span></span><span class="fl"><span>nobody represents.</span></span></h2>
       <p class="feat-p">A live list of unrepresented players and players looked after by relatives. Filter by value from under €500k to €25M+ and add them to your targets in one tap.</p>
       <ul class="feat-pts"><li>Value bands for every budget</li><li>Position, league and agent status filters</li><li>One-tap targets</li></ul>
-      <a class="feat-go" href="dashboard.html#app-noagents">Open No Agents <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="feat-go" href="auth.html#app-noagents">Open No Agents <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
     <div class="feat-m"><div class="device"><div class="dbar"><span class="dots"><i></i><i></i><i></i></span><span class="durl">agentsdesk.football/dashboard</span><span class="dtag">Demo · sample data</span></div><video data-rec="noagents" poster="noagents_poster.jpg" muted playsinline preload="none" aria-label="No Agents page in use" width="1920" height="1200"><source src="noagents.mp4" type="video/mp4"><source src="noagents.webm" type="video/webm"></video></div></div>
   </div>
@@ -99,7 +99,7 @@
     <div class="sec-head rv"><span class="eyebrow">The desk</span><h2 class="display" id="deskH">The rest of the desk, at work.</h2><p>Recorded from the dashboard demo. Pick a tool to watch it, then open it and try it yourself.</p></div>
     <div class="tut">
       <div class="tut-tabs" role="tablist" aria-label="Desk tools"><button class="tt on" role="tab" aria-selected="true" aria-controls="tf-calc" data-i="0" data-url="deal-calculator"><span class="tn">01</span><span class="tb"><b>Settle the number before the call.</b><small>Deal Calculator</small><span class="tx">Pick the player and both clubs from lists, set fee, add-ons and sell-on, and split the commission. Your cut updates as you type.</span></span><span class="tpg"><i></i></span></button><button class="tt" role="tab" aria-selected="false" aria-controls="tf-agency" data-i="1" data-url="agency"><span class="tn">02</span><span class="tb"><b>Your whole squad on one screen.</b><small>Agency</small><span class="tx">Injuries, rumours, contracts running out and last-match ratings for every player you manage.</span></span><span class="tpg"><i></i></span></button><button class="tt" role="tab" aria-selected="false" aria-controls="tf-teams" data-i="2" data-url="teams"><span class="tn">03</span><span class="tb"><b>Read the season.</b><small>Teams</small><span class="tx">Switch league, pick a club, and compare squad value, age and form with the league.</span></span><span class="tpg"><i></i></span></button></div>
-      <div class="tut-stage"><div class="dbar"><span class="dots"><i></i><i></i><i></i></span><span class="durl" id="tutUrl">agentsdesk.football/dashboard/deal-calculator</span><span class="dtag">Demo · sample data</span></div><div class="tut-frames"><figure class="tf on" id="tf-calc" data-i="0"><video data-rec="calc" poster="calc_poster.jpg" muted playsinline preload="none" aria-label="Deal Calculator page in use" width="1920" height="1200"><source src="calc.mp4" type="video/mp4"><source src="calc.webm" type="video/webm"></video><a class="tf-go" href="dashboard.html#app-calc">Open Deal Calculator <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></figure><figure class="tf" id="tf-agency" data-i="1"><video data-rec="agency" poster="agency_poster.jpg" muted playsinline preload="none" aria-label="Agency page in use" width="1920" height="1200"><source src="agency.mp4" type="video/mp4"><source src="agency.webm" type="video/webm"></video><a class="tf-go" href="dashboard.html#app-agency">Open Agency <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></figure><figure class="tf" id="tf-teams" data-i="2"><video data-rec="teams" poster="teams_poster.jpg" muted playsinline preload="none" aria-label="Teams page in use" width="1920" height="1200"><source src="teams.mp4" type="video/mp4"><source src="teams.webm" type="video/webm"></video><a class="tf-go" href="dashboard.html#app-teams">Open Teams <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></figure></div></div>
+      <div class="tut-stage"><div class="dbar"><span class="dots"><i></i><i></i><i></i></span><span class="durl" id="tutUrl">agentsdesk.football/dashboard/deal-calculator</span><span class="dtag">Demo · sample data</span></div><div class="tut-frames"><figure class="tf on" id="tf-calc" data-i="0"><video data-rec="calc" poster="calc_poster.jpg" muted playsinline preload="none" aria-label="Deal Calculator page in use" width="1920" height="1200"><source src="calc.mp4" type="video/mp4"><source src="calc.webm" type="video/webm"></video><a class="tf-go" href="auth.html#app-calc">Open Deal Calculator <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></figure><figure class="tf" id="tf-agency" data-i="1"><video data-rec="agency" poster="agency_poster.jpg" muted playsinline preload="none" aria-label="Agency page in use" width="1920" height="1200"><source src="agency.mp4" type="video/mp4"><source src="agency.webm" type="video/webm"></video><a class="tf-go" href="auth.html#app-agency">Open Agency <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></figure><figure class="tf" id="tf-teams" data-i="2"><video data-rec="teams" poster="teams_poster.jpg" muted playsinline preload="none" aria-label="Teams page in use" width="1920" height="1200"><source src="teams.mp4" type="video/mp4"><source src="teams.webm" type="video/webm"></video><a class="tf-go" href="auth.html#app-teams">Open Teams <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></figure></div></div>
     </div>
   </div>
 </section>
@@ -152,7 +152,7 @@
 <footer class="foot">
   <div class="wrap foot-g">
     <a class="brand" href="#top" aria-label="Agents Desk"><svg class="mark" width="30" height="30" viewBox="0 0 44 44" fill="none" aria-hidden="true"><circle class="ping" cx="22" cy="22" r="13.5" stroke="#F4691F" stroke-width="2"/><circle cx="22" cy="22" r="9" stroke="currentColor" stroke-width="3"/><circle class="beat" cx="22" cy="22" r="4.4" fill="#F4691F"/></svg><span>Agents Desk</span></a>
-    <nav aria-label="Footer"><a href="dashboard.html#app-ai">AI Agent</a><a href="dashboard.html#app-calc">Deal Calculator</a><a href="#security" data-anchor>Security</a><a href="https://agentsdesk.football/term-of-service">Terms of service</a><a href="https://agentsdesk.football/privacy-policy">Privacy</a><a href="https://agentsdesk.football/legal-notice">Legal notice</a><a href="#contact" data-anchor>Contact</a></nav>
+    <nav aria-label="Footer"><a href="auth.html#app-ai">AI Agent</a><a href="auth.html#app-calc">Deal Calculator</a><a href="#security" data-anchor>Security</a><a href="pricing.html">Pricing</a><a href="https://agentsdesk.football/term-of-service">Terms of service</a><a href="https://agentsdesk.football/privacy-policy">Privacy</a><a href="https://agentsdesk.football/legal-notice">Legal notice</a><a href="#contact" data-anchor>Contact</a></nav>
     <p>Agents Desk is an independent software company. We represent no players and take no position in any transfer. This is a design prototype: the dashboard demo uses fictional sample data.</p>
   </div>
 </footer>
@@ -171,7 +171,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-<script src="numbers.js?v=5" defer></script>
-<script src="site.js?v=3" defer></script>
+<script src="numbers.js?v=20261013" defer></script>
+<script src="site.js?v=20261013" defer></script>
 </body>
 </html>

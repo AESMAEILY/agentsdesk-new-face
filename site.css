@@ -1,5 +1,5 @@
 /* Agents Desk — landing page
-   Type: Archivo (display) · Inter (body) · IBM Plex Mono (labels)
+   Type: Geist (display + body) · Geist Mono (labels, numbers)
    Colour: black / white / brand orange #F4691F */
 :root{
   --ink:#0B0B0E;--ink-2:#131317;--ink-3:#1B1B21;
@@ -7,7 +7,7 @@
   --paper:#FFFFFF;--paper-2:#F6F5F3;--paper-3:#EEECE8;
   --text:#15151C;--mute:#5C5A57;--faint:#8C8883;--line:rgba(21,21,28,.1);
   --orange:#F4691F;--orange-hi:#FF8A4A;--orange-dk:#C2490B;
-  --f-display:"Archivo",system-ui,sans-serif;--f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;--f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --f-display:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;--f-body:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;--f-mono:"Geist Mono",ui-monospace,Menlo,monospace;
   --wrap:1200px;--gut:clamp(16px,4vw,48px);--sec:clamp(80px,10vw,128px);
   --r:20px;--ease:cubic-bezier(.2,.8,.2,1);
 }
@@ -22,7 +22,7 @@ h1,h2,h3,p{margin:0}
 .skip{position:absolute;left:-999px;top:10px;z-index:200;background:var(--orange);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
 .skip:focus{left:16px}
 .wrap{width:100%;max-width:calc(var(--wrap) + var(--gut)*2);margin:0 auto;padding-inline:var(--gut)}
-.display{font-family:var(--f-display);font-stretch:112%;font-weight:800;letter-spacing:-.03em;line-height:.98;text-wrap:balance}
+.display{font-family:var(--f-display);font-weight:700;letter-spacing:-.038em;line-height:1.02;text-wrap:balance}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-dk)}
 .eyebrow::before{content:"";width:18px;height:2px;background:var(--orange)}
 .dark{background:var(--ink);color:var(--chalk)}
@@ -163,7 +163,7 @@ h1,h2,h3,p{margin:0}
 .lab{display:flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:clamp(9.5px,1.15cqi,11.5px);letter-spacing:.12em;text-transform:uppercase;color:var(--chalk-faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .live{flex:none;width:7px;height:7px;border-radius:50%;background:#22C55E;animation:pulseG 2s infinite}
 @keyframes pulseG{70%{box-shadow:0 0 0 7px rgba(34,197,94,0)}0%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}}
-.odo{display:flex;align-items:flex-end;height:1em;margin-top:10px;font-family:var(--f-display);font-stretch:105%;font-weight:800;font-size:clamp(22px,4.6cqi,44px);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--chalk)}
+.odo{display:flex;align-items:flex-end;height:1em;margin-top:10px;font-family:var(--f-display);font-weight:800;font-size:clamp(22px,4.6cqi,44px);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--chalk)}
 .cell:first-child .odo{color:var(--orange-hi)}
 .odo .d{display:inline-block;height:1em;overflow:hidden;width:.62em;text-align:center}
 .odo .col{display:flex;flex-direction:column;will-change:transform}
@@ -222,7 +222,7 @@ h1,h2,h3,p{margin:0}
 .tt:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
 .tn{font-family:var(--f-mono);font-size:12px;color:var(--faint);padding-top:3px}
 .tt.on .tn{color:var(--orange-dk)}
-.tb b{display:block;font-family:var(--f-display);font-stretch:108%;font-weight:700;font-size:clamp(17px,1.5vw,20px);letter-spacing:-.01em;line-height:1.2}
+.tb b{display:block;font-family:var(--f-display);font-weight:700;font-size:clamp(17px,1.5vw,20px);letter-spacing:-.01em;line-height:1.2}
 .tb small{display:block;margin-top:4px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
 .tx{display:block;max-height:0;opacity:0;overflow:hidden;color:var(--mute);font-size:14.5px;transition:max-height .5s var(--ease),opacity .4s,margin .4s}
 .tt.on .tx{max-height:140px;opacity:1;margin-top:10px}

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pricing — Agents Desk</title>
+<meta name="description" content="Agents Desk pricing: Basic, Pro and Elite plans for football agents, monthly or yearly with 10% off, and a team plan for agencies. Every plan starts with a 3-day free trial.">
+<meta name="theme-color" content="#0B0B0E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400..600&display=swap">
+<link rel="stylesheet" href="site.css?v=20261013">
+<link rel="stylesheet" href="pricing.css?v=20261013">
+<script>document.documentElement.classList.add("js")</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Agents Desk","description":"Football agent software: AI player search, deal calculator, transfer CRM and live transfer news.","brand":{"@type":"Brand","name":"Agents Desk"},"offers":[{"@type":"Offer","name":"Basic monthly","price":"6.99","priceCurrency":"EUR","url":"https://agentsdesk.football/pricing"},{"@type":"Offer","name":"Pro monthly","price":"12.99","priceCurrency":"EUR","url":"https://agentsdesk.football/pricing"},{"@type":"Offer","name":"Pro yearly","price":"140.29","priceCurrency":"EUR","url":"https://agentsdesk.football/pricing"},{"@type":"Offer","name":"Elite monthly","price":"19.99","priceCurrency":"EUR","url":"https://agentsdesk.football/pricing"},{"@type":"Offer","name":"Elite yearly","price":"215.89","priceCurrency":"EUR","url":"https://agentsdesk.football/pricing"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="nav">
+  <a class="brand" href="index.html" aria-label="Agents Desk, back to top"><svg class="mark" width="30" height="30" viewBox="0 0 44 44" fill="none" aria-hidden="true"><circle class="ping" cx="22" cy="22" r="13.5" stroke="#F4691F" stroke-width="2"/><circle cx="22" cy="22" r="9" stroke="currentColor" stroke-width="3"/><circle class="beat" cx="22" cy="22" r="4.4" fill="#F4691F"/></svg><span>Agents Desk</span></a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="auth.html#app-ai">AI Agent</a><a href="auth.html#app-noagents">No Agents</a><a href="auth.html#app-calc">Deal Calculator</a><a href="index.html#desk">The Desk</a><a href="index.html#security">Security</a><a href="pricing.html" aria-current="page">Pricing</a>
+  </nav>
+  <div class="nav-end">
+    <a class="Btn nav-ct" href="index.html#contact" aria-label="Contact us"><span class="sign"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg></span><span class="text">Contact</span></a>
+    <a class="btn-dash" href="auth.html#app-overview">Dashboard <span class="ar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+  </div>
+</header>
+<div class="sheet" id="sheet" hidden>
+  <a href="auth.html#app-ai">AI Agent</a><a href="auth.html#app-noagents">No Agents</a><a href="auth.html#app-calc">Deal Calculator</a><a href="index.html#desk">The Desk</a><a href="index.html#security">Security</a><a href="pricing.html">Pricing</a><a href="index.html#contact">Contact</a>
+  <a class="sheet-cta" href="auth.html#app-overview">Open the dashboard demo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
+<main id="main">
+<section class="pr-hero dark" id="top" aria-labelledby="prH">
+  <div class="wrap">
+    <div class="pr-head">
+      <span class="eyebrow">Pricing</span>
+      <h1 class="display" id="prH">Try any plan <span class="o">free for 3 days.</span></h1>
+      <p class="lead">Use the full product for 3 days, then decide. Cancel before the trial ends and you pay nothing.</p>
+    </div>
+
+    <div class="aud" role="tablist" aria-label="Who is it for">
+      <button role="tab" data-tab="individual" aria-controls="plans">For one agent</button>
+      <button role="tab" data-tab="enterprise" aria-controls="team">For agencies &amp; teams</button>
+    </div>
+
+    <div class="controls" id="plansTop">
+      <div class="seg" data-seg="period" aria-label="Billing period"><button data-v="monthly">Monthly</button><button data-v="yearly">Yearly <i>Save 10%</i></button></div>
+    </div>
+    <p class="tax-note" aria-live="polite"></p>
+
+    <div id="plans" class="plans"></div>
+    <button type="button" class="to-compare only-ind" data-tocompare><span>Not sure which plan? Compare every feature</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
+
+    <div id="team" class="team" hidden>
+      <div class="team-tx">
+        <h2 class="display">Agents Desk for agencies.</h2>
+        <p>One workspace for your agency. Every seat gets the full Elite plan, and the agency gets one bill.</p>
+        <ul class="key">
+          <li><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>The full Elite plan for every seat</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>One bill and one VAT invoice for the agency</li>
+          <li><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Add or remove seats at any time</li>
+        </ul>
+      </div>
+      <div class="team-calc">
+        <span class="lab" id="seatLab">How many seats?</span>
+        <div class="seats" role="group" aria-labelledby="seatLab"><button data-seatstep="-1" aria-label="One seat fewer">−</button><output id="seatN" aria-live="polite">3</output><button data-seatstep="1" aria-label="One seat more">+</button></div>
+        <p class="seat-hint" id="seatHint"></p>
+        <p class="seat-math" id="seatMath" aria-live="polite"></p>
+        <div class="team-total"><span>Total</span><b id="teamTotal">€0</b><span>/ month</span></div>
+        <p class="bill" id="teamBill"></p>
+        <button class="cta primary wide" data-team-start>Start 3-day team trial</button>
+        <a class="cta wide ghost" href="mailto:info@agentsdesk.football?subject=Agents%20Desk%20for%20agencies">More than 10 seats or paying by invoice? Talk to us</a>
+        <p class="co-fine center">Team prices exclude VAT.</p>
+      </div>
+    </div>
+
+    <div class="trial-strip rv" aria-labelledby="trialH">
+      <h2 id="trialH">How the 3&#8209;day trial works</h2>
+      <ol id="timeline" class="timeline"></ol>
+    </div>
+
+    <div class="pay-row rv" aria-label="Accepted payment methods">
+      <span class="lab">Pay with</span>
+      <span class="pmeth">Visa · Mastercard · Amex</span><span class="pmeth">Apple Pay</span><span class="pmeth">Google Pay</span><span class="pmeth">PayPal</span><span class="pmeth">SEPA Direct Debit</span>
+    </div>
+  </div>
+</section>
+
+<section class="pr-compare light" id="compare" aria-labelledby="cmpH">
+  <div class="wrap">
+    <div class="sec-head rv"><h2 class="display" id="cmpH">Compare plans</h2></div>
+    <div class="mtabs" role="tablist" aria-label="Plan to show"><button role="tab" data-mplan="basic">Basic</button><button role="tab" data-mplan="pro">Pro</button><button role="tab" data-mplan="elite">Elite</button></div>
+    <div class="tbl-wrap rv">
+      <table id="cmp" class="cmp">
+        <thead><tr><th scope="col"><span class="sr">Feature</span></th>
+          <th scope="col" data-col="basic">Basic<span class="th-price"></span></th>
+          <th scope="col" data-col="pro" class="rec-col">Pro <span class="star">Recommended</span><span class="th-price"></span></th>
+          <th scope="col" data-col="elite">Elite<span class="th-price"></span></th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="faq dark" id="faq" aria-labelledby="faqH">
+  <div class="wrap faq-g">
+    <div class="sec-head rv"><h2 class="display" id="faqH">Questions</h2></div>
+    <div class="qas"><div class="qa"><button aria-expanded="false">When exactly will I be charged?<span class="pm"></span></button><div class="ans"><div><p>Exactly 72 hours after you start, to the minute, even if the clocks change in between. The date, time and time zone are shown on the plan card and at checkout, and we email you 24 hours before with the exact amount.</p></div></div></div><div class="qa"><button aria-expanded="false">Do I need a card to start the trial?<span class="pm"></span></button><div class="ans"><div><p>Yes. You add a card, wallet or bank account when you start, so your plan can carry on if you keep it. Nothing is charged during the 3 days, and we remind you before the first payment.</p></div></div></div><div class="qa"><button aria-expanded="false">How do I cancel?<span class="pm"></span></button><div class="ans"><div><p>Settings › Plan &amp; billing › Cancel. One click, no call or email needed. Cancel during the trial and you pay nothing. After a paid period you keep access until it ends, and your data is kept for 30 days in case you come back.</p></div></div></div><div class="qa"><button aria-expanded="false">What can I use during the trial?<span class="pm"></span></button><div class="ans"><div><p>Everything in the plan you picked, with exactly the limits shown in the table. You can switch plans during the trial; you're charged for the plan you have when it ends.</p></div></div></div><div class="qa" id="faq-refunds"><button aria-expanded="false">What is your refund policy?<span class="pm"></span></button><div class="ans"><div><p>Monthly plans: cancel any time and keep access until the end of the month you paid for; we don't refund part-months. Yearly plans: full refund if you ask within 14 days of the first yearly payment, and after that you keep access until the year ends. If you are a consumer in the EU, your legal withdrawal rights always apply on top of this.</p></div></div></div><div class="qa"><button aria-expanded="false">Why are prices in euros, and what about VAT?<span class="pm"></span></button><div class="ans"><div><p>Agents Desk is billed from Germany, so there is one price list in euros for everyone. Paying from a pound, dollar or franc account? Your card, wallet or PayPal converts the amount automatically; your bank may add a small conversion fee. Prices exclude VAT. At checkout you choose your billing country: German customers pay 19% VAT, businesses elsewhere with a valid VAT ID pay no VAT (reverse charge), and private customers in the EU pay their own country's rate.</p></div></div></div><div class="qa"><button aria-expanded="false">Can I change plan later?<span class="pm"></span></button><div class="ans"><div><p>Yes. After the trial, upgrades apply immediately and you only pay the difference for the rest of your billing period. Downgrades take effect at your next renewal. Nothing is deleted when you downgrade: items above the new limit become read-only.</p></div></div></div><div class="qa"><button aria-expanded="false">What if I hit a daily limit?<span class="pm"></span></button><div class="ans"><div><p>Your limits reset at midnight. If you can't wait, turn on extra usage in Settings › Plan & billing and buy credits: each extra AI search or calculation then uses a few cents from your balance. You choose the amount, can set a monthly cap, and credits never expire. Or upgrade, and the higher limits apply straight away.</p></div></div></div><div class="qa"><button aria-expanded="false">What if a payment fails?<span class="pm"></span></button><div class="ans"><div><p>We email you and try again over 7 days. If it still fails, your account becomes read-only until you update your payment method. Nothing is deleted for 30 days.</p></div></div></div><div class="qa"><button aria-expanded="false">Can I take the free trial again?<span class="pm"></span></button><div class="ans"><div><p>The trial is once per person. If you come back later, your plan starts straight away and you see the amount before you confirm.</p></div></div></div><div class="qa"><button aria-expanded="false">Do you offer discounts for students, clubs or federations?<span class="pm"></span></button><div class="ans"><div><p>Write to info@agentsdesk.football and tell us about your situation. We look at every request.</p></div></div></div></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-g">
+    <a class="brand" href="index.html" aria-label="Agents Desk"><svg class="mark" width="30" height="30" viewBox="0 0 44 44" fill="none" aria-hidden="true"><circle class="ping" cx="22" cy="22" r="13.5" stroke="#F4691F" stroke-width="2"/><circle cx="22" cy="22" r="9" stroke="currentColor" stroke-width="3"/><circle class="beat" cx="22" cy="22" r="4.4" fill="#F4691F"/></svg><span>Agents Desk</span></a>
+    <nav aria-label="Footer"><a href="auth.html#app-ai">AI Agent</a><a href="auth.html#app-calc">Deal Calculator</a><a href="index.html#security">Security</a><a href="pricing.html">Pricing</a><a href="https://agentsdesk.football/term-of-service">Terms of service</a><a href="https://agentsdesk.football/privacy-policy">Privacy</a><a href="https://agentsdesk.football/legal-notice">Legal notice</a><a href="index.html#contact">Contact</a></nav>
+    <p>Agents Desk is an independent software company. We represent no players and take no position in any transfer. This is a design prototype: the dashboard demo uses fictional sample data.</p>
+  </div>
+</footer>
+
+<div class="drawer" id="checkout" hidden>
+  <div class="scrim" data-close></div>
+  <aside class="panel" role="dialog" aria-modal="true" aria-labelledby="coH">
+    <header><h2 id="coH">Start your free trial</h2><button class="co-close" data-close aria-label="Close">✕</button></header>
+    <div id="coBody"></div>
+  </aside>
+</div>
+
+<script src="billing.js?v=20261013" defer></script>
+<script src="pricing.js?v=20261013" defer></script>
+</body>
+</html>

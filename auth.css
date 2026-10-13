@@ -1,0 +1,57 @@
+/* Agents Desk sign up / log in.
+   Form based on Uiverse.io (JohnnyCSilva), restyled in the Agents Desk theme. */
+.auth-page{min-height:100svh;margin:0;background:var(--ink,#0B0B0E);color:var(--chalk,#F5F3EF);position:relative;overflow-x:hidden}
+.auth-page::before{content:"";position:fixed;right:-15%;top:-25%;width:70vw;max-width:900px;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(244,105,31,.20),transparent 70%);pointer-events:none}
+.auth-page::after{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 45%,#000,transparent 80%);mask-image:radial-gradient(ellipse 70% 60% at 50% 45%,#000,transparent 80%);pointer-events:none}
+.auth-back{position:absolute;top:22px;left:var(--gut,24px);z-index:2;font-size:14px;font-weight:600;color:rgba(245,243,239,.7);text-decoration:none}
+.auth-back:hover{color:#fff}
+.auth-wrap{position:relative;z-index:1;min-height:100svh;display:grid;grid-template-columns:minmax(0,1fr);place-items:center;padding:72px 16px 40px;box-sizing:border-box}
+
+/* the form card */
+.form{display:flex;flex-direction:column;gap:10px;background-color:#fff;color:#151717;padding:30px;width:min(450px,100%);box-sizing:border-box;border-radius:20px;font-family:var(--f-body);box-shadow:0 40px 100px -40px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.06)}
+.form ::placeholder{font-family:var(--f-body);color:#9A9893}
+.auth-brand{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;margin-bottom:6px;font-family:var(--f-display);font-weight:800;font-size:18px;color:#151717;text-decoration:none}
+.form h1{margin:0;font-family:var(--f-display);font-weight:800;font-size:28px;line-height:1.1;letter-spacing:-.01em}
+.auth-sub{margin:0 0 8px;color:#6B6862;font-size:14.5px}
+.auth-sub b{color:#151717}
+.auth-note{margin:0 0 4px;padding:10px 12px;border-radius:10px;background:#FFF4EC;color:#7A2E06;font-size:13.5px}
+.auth-note.ok{background:#ECFDF3;color:#14532D}
+.auth-note[hidden]{display:none}
+
+.flex-column>label{color:#151717;font-weight:600;font-size:14.5px}
+.inputForm{border:1.5px solid #ecedec;border-radius:10px;height:50px;display:flex;align-items:center;padding-left:10px;color:#8C8883;transition:.2s ease-in-out}
+.input{margin-left:10px;border-radius:10px;border:none;width:100%;height:100%;font:500 15px var(--f-body);color:#151717;background:transparent;min-width:0}
+.input:focus{outline:none}
+.inputForm:focus-within{border:1.5px solid var(--orange,#F4691F);color:var(--orange,#F4691F)}
+.eye{all:unset;cursor:pointer;display:grid;place-items:center;width:44px;height:100%;color:#8C8883;flex:none}
+.eye:hover,.eye[aria-pressed=true]{color:#151717}
+.eye:focus-visible{outline:2px solid var(--orange);outline-offset:-4px;border-radius:8px}
+
+.flex-row{display:flex;flex-direction:row;align-items:center;gap:10px;justify-content:space-between}
+.flex-row>div{display:flex;align-items:center;gap:6px}
+.flex-row>div>label{font-size:14px;color:#151717;font-weight:400}
+.flex-row input[type=checkbox]{width:16px;height:16px;margin:0;accent-color:var(--orange,#F4691F)}
+.span{all:unset;font-size:14px;margin-left:5px;color:var(--orange-dk,#C2490B);font-weight:600;cursor:pointer}
+.span:hover{text-decoration:underline}
+.span:focus-visible{outline:2px solid var(--orange);outline-offset:2px;border-radius:4px}
+
+.button-submit{margin:20px 0 10px;background-color:var(--orange,#F4691F);border:none;color:#fff;font:700 15.5px var(--f-body);border-radius:10px;height:50px;width:100%;cursor:pointer;box-shadow:inset 0 2px 2px rgba(255,255,255,.22),0 14px 30px -14px rgba(244,105,31,.9);transition:background .2s}
+.button-submit:hover{background:#E05A12}
+.button-submit:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.button-submit:disabled{opacity:.8;cursor:progress}
+.p{text-align:center;color:#151717;font-size:14px;margin:5px 0}
+.p.line{display:flex;align-items:center;gap:12px;color:#8C8883}
+.p.line::before,.p.line::after{content:"";flex:1;height:1px;background:#ecedec}
+
+.form .btn{margin-top:10px;width:100%;height:50px;border-radius:10px;display:flex;justify-content:center;align-items:center;font:600 15px var(--f-body);color:#151717;gap:10px;border:1px solid #ededef;background-color:#fff;cursor:pointer;transition:.2s ease-in-out}
+.form .btn:hover{border:1px solid var(--orange,#F4691F)}
+.form .btn:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.fine{margin:12px 0 0;font-size:12.5px;color:#8C8883;text-align:center}
+.fine a{color:#6B6862}
+[data-only][hidden]{display:none!important}
+
+@media (max-width:480px){
+  .form{padding:24px 20px}
+  .form h1{font-size:25px}
+  
+}
