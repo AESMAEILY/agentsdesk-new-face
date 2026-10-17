@@ -11,14 +11,14 @@
 
   /* ---------------- data: prices, tax, coupons and proration come from js/billing.js (window.ADB), in cents ---------------- */
   const B = window.ADB;
-  const REFUND_DAYS = 14, DAY = 864e5, TRIAL_MS = 72 * 36e5;
+  const REFUND_DAYS = 14, DAY = 864e5, TRIAL_MS = 168 * 36e5;
   const U = Infinity;
   const PLANS = {
     basic: { name: 'Basic', fit: 'For 1–2 clients', yearly: false, rank: 0,
       lim: { agency: 1, calc: 3, req: 3, ai: 3, saved: 3, log: 3, noag: 75 } },
-    pro: { name: 'Pro', fit: 'For 3–15 clients', yearly: true, rank: 1,
+    pro: { name: 'Pro', fit: 'For 3–15 clients', yearly: false, rank: 1,
       lim: { agency: 10, calc: 20, req: 20, ai: 20, saved: 25, log: 25, noag: 250 } },
-    elite: { name: 'Elite', fit: 'For 15+ clients or daily scouting', yearly: true, rank: 2,
+    elite: { name: 'Elite', fit: 'For 15+ clients or daily scouting', yearly: false, rank: 2,
       lim: { agency: U, calc: 50, req: 50, ai: 50, saved: U, log: U, noag: U } },
   };
   /* extra usage: price per action above the daily limit, net cents (proposal) */
@@ -232,7 +232,7 @@
     }
     const nudge = ['active', 'trialing'].includes(sub.status) && sub.period === 'monthly' && B.hasYearly(bp())
       ? `<div class="nudge"><span>Switch to yearly and save <b>${money(disp(sub.plan, 'yearly', sub.seats).saving)}</b> a year.</span><button class="btn b-sm b-dark" data-switchyear>Switch to yearly</button></div>`
-      : ['active', 'trialing'].includes(sub.status) && sub.plan === 'basic' ? `<div class="nudge"><span>Need more searches and calculations? Pro yearly is ${money(disp('pro', 'yearly').perMonth)} a month ${taxWord()}.</span><button class="btn b-sm b-dark" data-plans>Compare plans</button></div>` : '';
+      : ['active', 'trialing'].includes(sub.status) && sub.plan === 'basic' ? `<div class="nudge"><span>Need more searches and calculations? Pro is ${money(disp('pro', 'monthly').perMonth)} a month ${taxWord()}.</span><button class="btn b-sm b-dark" data-plans>Compare plans</button></div>` : '';
     const cp = sub.coupon, cpLive = cp && B.couponApplies(cp, sub.payIndex || 0);
     const extras = `<dl class="bx">
         <div><dt>Discount</dt><dd>${cp ? `<b>${esc(cp.code)}</b> · ${esc(cp.label)}${cpLive ? '' : ' <span class="muted">(used)</span>'}` : '<span class="muted">None</span>'}</dd>${sub.status === 'expired' ? '' : `<button class="lnk" data-redeem>${cp && cpLive ? 'Change' : 'Redeem a code'}</button>`}</div>
@@ -405,7 +405,7 @@
   function plansModal(period = sub.period) {
     const cur = sub.plan, live = sub.status !== 'expired';
     modal(`${sub.seats > 1 && live ? `<p class="agency-note">You're on the <b>Agency plan with ${sub.seats} seats</b>. <button class="lnk" data-seats>Change the number of seats</button>, or move to a single-user plan below. That change applies when your current period ends.</p>` : ''}<div class="pm-h"><div><span class="lbl">Change plan</span><h2>Pick the plan that fits</h2></div>
-        <div class="seg2" role="group" aria-label="Billing period"><button data-pp="monthly" class="${period === 'monthly' ? 'on' : ''}" aria-pressed="${period === 'monthly'}">Monthly</button><button data-pp="yearly" class="${period === 'yearly' ? 'on' : ''}" aria-pressed="${period === 'yearly'}">Yearly <i>−${B.YEARLY_OFF_BP / 100}%</i></button></div></div>
+        </div>
       <div class="pm-cards">${Object.entries(PLANS).map(([id, p]) => {
         const per = B.effPeriod(id, period), isCur = live && id === cur && sub.seats <= 1 && per === sub.period;
         const label = !live ? 'Choose' : sub.seats > 1 ? 'Move to this plan' : isCur ? 'Current plan' : p.rank > PLANS[cur].rank ? 'Upgrade' : p.rank < PLANS[cur].rank ? 'Downgrade' : `Switch to ${per}`;
@@ -489,7 +489,7 @@
     modal(`<span class="lbl">Discount code</span><h2>Redeem a code</h2>
       <p class="muted">The discount applies from your next payment${sub.status === 'trialing' ? ', the first one after your trial' : ''}.</p>
       <label class="cap-in wide"><span>Code</span><input id="rdCode" autocomplete="off" spellcheck="false" placeholder="e.g. WELCOME10" style="text-transform:uppercase"></label>
-      <p class="fine" id="rdMsg">Demo codes: WELCOME10, AGENT20 (monthly), YEARLY15 (yearly), AGENCY10 (agency).</p>
+      <p class="fine" id="rdMsg">Demo codes: WELCOME10, AGENT20, AGENCY10 (agency).</p>
       <div class="row-end"><button class="btn b-gh" data-close>Cancel</button><button class="btn b-or" id="rdGo">Apply</button></div>`, 'acct-modal sm');
     const go = () => {
       const r = B.checkCoupon($('#rdCode').value, { plan: bp(), period: sub.period });
