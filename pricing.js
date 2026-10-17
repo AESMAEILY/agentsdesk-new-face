@@ -4,7 +4,7 @@
 (function () {
   const B = window.ADB;
   const $ = (s, c = document) => c.querySelector(s), $$ = (s, c = document) => [...c.querySelectorAll(s)];
-  const TRIAL_HOURS = 72;              // exactly 72 hours, also across clock changes
+  const TRIAL_HOURS = 168;             // 7 days, exactly 168 hours, also across clock changes
   const REFUND_DAYS = 14;              // money-back window on the first yearly payment (proposal)
   const RM = matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -46,7 +46,7 @@
   const savedC = store.get('country');
   const S = {
     aud: 'individual',
-    period: store.get('period') === 'monthly' ? 'monthly' : 'yearly',
+    period: 'monthly',
     country: B.COUNTRIES.some(c => c.id === savedC) ? savedC : B.guessCountry(),
     buyer: store.get('buyer') === 'private' ? 'private' : 'business',
     seats: 3,
@@ -66,7 +66,7 @@
   const longDate = d => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
   const shortDate = d => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
   const trialEnd = () => new Date(Date.now() + TRIAL_HOURS * 3600e3);
-  const reminder = () => new Date(Date.now() + (TRIAL_HOURS - 24) * 3600e3);
+  const reminder = () => new Date(Date.now() + (TRIAL_HOURS - 48) * 3600e3);
   const periodEnd = (every, from = new Date()) => new Date(B.addPeriod(from.getTime(), every === 'year' ? 'yearly' : 'monthly'));
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const ICON = {
@@ -300,7 +300,7 @@
     if (!CO.codeOpen) return `<button type="button" class="pay-switch" data-codeopen>Have a discount code?</button>${CO.codeMsg ? `<p class="code-err" role="alert">${esc(CO.codeMsg)}</p>` : ''}`;
     return `<div class="code-row"><div class="input_container"><label class="input_label" for="pf-code">Discount code</label>
         <div class="code-in"><input id="pf-code" class="input_field" placeholder="e.g. WELCOME10" autocomplete="off" autocapitalize="characters" spellcheck="false" value="${esc(CO.f.code || '')}"><button type="button" class="code-apply" data-applycode>Apply</button></div></div>
-        ${CO.codeMsg ? `<p class="code-err" role="alert">${esc(CO.codeMsg)}</p>` : '<p class="pay-note">Demo codes: WELCOME10, AGENT20 (monthly), YEARLY15 (yearly), AGENCY10 (agency).</p>'}</div>`;
+        ${CO.codeMsg ? `<p class="code-err" role="alert">${esc(CO.codeMsg)}</p>` : '<p class="pay-note">Demo codes: WELCOME10, AGENT20, AGENCY10 (agency).</p>'}</div>`;
   }
   const ready = () => { const s = taxCountry().state; return s !== 'estimate' && s !== 'declare'; };
   const demoHint = () => CO.method === 'card' ? '<p class="pay-note">Demo cards by country: 4000 0027 6000 0016 Germany · 4000 0025 0000 0003 France · 4000 0052 8000 0002 Netherlands · 4242 4242 4242 4242 United States.</p>'
@@ -380,7 +380,7 @@
     const buy = CO.mode === 'buy', team = CO.plan === 'team', pl = PLANS.find(p => p.id === CO.plan);
     box.innerHTML = `
       <div class="co-mode" role="radiogroup" aria-label="How do you want to start?">
-        <button role="radio" aria-checked="${!buy}" class="${!buy ? 'on' : ''}" data-mode="trial"><b>3-day free trial</b><small>${fmt(0)} today, pay later</small></button>
+        <button role="radio" aria-checked="${!buy}" class="${!buy ? 'on' : ''}" data-mode="trial"><b>7-day free trial</b><small>${fmt(0)} today, pay later</small></button>
         <button role="radio" aria-checked="${buy}" class="${buy ? 'on' : ''}" data-mode="buy"><b>Buy now</b><small>Skip the trial, start today</small></button>
       </div>
       <div class="co-pick">
@@ -389,8 +389,6 @@
       </div>
       ${CO.edit && !team ? `<div class="co-edit">
         <div class="co-plans" role="radiogroup" aria-label="Plan">${PLANS.map(p => `<button class="co-plan${p.id === CO.plan ? ' on' : ''}" role="radio" aria-checked="${p.id === CO.plan}" data-p="${p.id}"><b>${p.name}</b><span>${fmt(B.display(p.id, S.period, { country: q.tax.c.id, buyer: S.buyer, vatOk: vatOk() }).perMonth)}/mo</span></button>`).join('')}</div>
-        <div class="seg sm" data-seg="period"><button data-v="monthly">Monthly</button><button data-v="yearly" ${B.hasYearly(CO.plan) ? '' : 'disabled title="Basic is monthly only"'}>Yearly <i>−${B.YEARLY_OFF_BP / 100}%</i></button></div>
-        ${!B.hasYearly(CO.plan) && S.period === 'yearly' ? '<p class="co-fine">Basic is billed monthly. Choose Pro or Elite for yearly billing.</p>' : ''}
       </div>` : ''}
       ${taxBlock(q)}
       ${summary(q, buy)}

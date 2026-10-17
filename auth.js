@@ -30,7 +30,7 @@
     $$('[data-only]').forEach(e => e.hidden = e.dataset.only !== mode);
     $('#aTitle').textContent = signup ? 'Create your account' : 'Welcome back';
     $('#aSub').innerHTML = signup
-      ? (plan ? `${trial ? 'Your plan' : 'Paid'}: <b>${PLANS_LBL()}</b>. ${trial ? 'Free for 3 days.' : 'Create your account to open your desk.'}` : 'Start with a 3-day free trial.')
+      ? (plan ? `${trial ? 'Your plan' : 'Paid'}: <b>${PLANS_LBL()}</b>. ${trial ? 'Free for 7 days.' : 'Create your account to open your desk.'}` : 'Start with a 7-day free trial.')
       : 'Log in to your desk.';
     $('#aGo').textContent = signup ? 'Sign up' : 'Log in';
     $('#fPw').autocomplete = signup ? 'new-password' : 'current-password';
@@ -72,7 +72,7 @@
       credits: { bal: 0, on: false, cap: null, auto: { on: false, below: 500, add: 2500 }, spent: 0, month: new Date().toISOString().slice(0, 7), log: [] } };
     const bp = base.seats > 1 ? 'team' : base.plan;
     if (kind === 'signup' || plan || isTeam) {
-      if (trial) ls.set('ad-sub', Object.assign(base, { status: 'trialing', start: nowT, trialEnd: nowT + 72 * 36e5 }));
+      if (trial) ls.set('ad-sub', Object.assign(base, { status: 'trialing', start: nowT, trialEnd: nowT + 168 * 36e5 }));
       else { /* paid on the pricing page: active from today, first invoice from the same quote */
         const qt = B.quote({ plan: bp, period: per, seats, country: cid, buyer, vatOk: vOk, coupon: base.coupon, payIndex: 0 });
         ls.set('ad-sub', Object.assign(base, { status: 'active', start: nowT, trialEnd: nowT, paidSince: nowT, periodEnd: B.addPeriod(nowT, per),

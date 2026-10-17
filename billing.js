@@ -11,8 +11,8 @@
    - Downgrades and switching yearly → monthly apply at the end of the paid period.
    - Account credit is applied to the next invoices automatically, before VAT. */
 (function () {
-  const PRICE = { basic: 699, pro: 1299, elite: 1999 };      // net cents per month (agreed pricing sheet)
-  const YEARLY = { basic: false, pro: true, elite: true };
+  const PRICE = { basic: 699, pro: 999, elite: 1499 };       // net cents per month (Oct 2026 pricing)
+  const YEARLY = { basic: false, pro: false, elite: false, team: false }; // yearly billing paused for now
   const YEARLY_OFF_BP = 1000;                                   // 10.00 % in basis points
   const TEAM = { min: 2, max: 10 };
   const NAMES = { basic: 'Basic', pro: 'Pro', elite: 'Elite', team: 'Agency' };
@@ -58,7 +58,7 @@
   };
 
   /* ---------- prices ---------- */
-  const hasYearly = plan => plan === 'team' ? true : !!YEARLY[plan];
+  const hasYearly = plan => !!YEARLY[plan];
   const effPeriod = (plan, period) => period === 'yearly' && hasYearly(plan) ? 'yearly' : 'monthly';
   const yearlyNet = plan => Math.floor(PRICE[plan] * 12 * (10000 - YEARLY_OFF_BP) / 10000);
   /* net cents charged per billing period */
